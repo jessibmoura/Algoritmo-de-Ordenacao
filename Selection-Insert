@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+//Insert Sort
+//Melhor caso: O(n), Pior/Médio caso: O(n²)
+void insert(int vet[],int tam){
+    int i,j,pivot;
+    for (i=1;i<tam;i++){
+        j = i-1;
+        pivot = v[i];
+        while((j>=0)&&(v[j]>pivot)){
+            v[j+1] = vet[j];
+            j--;
+        }
+        vet[j+1] = pivot;
+    }
+}
+
+//Selection Sort
+//Melhor caso: O(n²), Pior/Médio caso: O(n²)
+void selection(int vet[],int tam){
+    int i,j,menor,temp;
+    for(i=0;i<tam;i++){
+        menor=i;
+        for(j=i+1;j<tam;j++){
+            if(vet[j]<vet[menor]){
+                menor=j;
+            }
+        }
+        temp=vet[i];
+        vet[i]=vet[menor];
+        vet[menor]=temp;
+    }
+}
